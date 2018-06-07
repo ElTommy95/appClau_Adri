@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    BackgroundColor="White"
+    Title="Login"
+    x:Class="appClau_Adri.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Login}">
+            <StackLayout
+                Padding="10,20">
+                <Label
+                    Margin="20,10,20,60"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="Nuestra Boda"
+                    TextColor="White">
+                </Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontSize="Medium"
+                        Text="Usuario"
+                        TextColor="Black"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        TextColor="White"
+                        Text="{Binding Txt_user, Mode=TwoWay}"
+                        Placeholder="Ingrese su Usuario..."
+                        PlaceholderColor="White">
+                    </Entry>
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        FontSize="Medium"
+                        Text="Contraseña"
+                        TextColor="Black"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="White"
+                        IsPassword="True"
+                        Text="{Binding Txt_passw, Mode=TwoWay}"
+                        Placeholder="Ingrese su Contraseña..."
+                        PlaceholderColor="White">
+                    </Entry>
+                </Grid>
+                <StackLayout
+                    Padding="20,30"
+                    Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="StartAndExpand"
+                        Text="Recordar Credenciales"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        IsToggled="{Binding IsRecordar,Mode=TwoWay}"
+                        HorizontalOptions="End">
+                    </Switch>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,0"
+                    Orientation="Horizontal"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                    <Button
+                        BackgroundColor="Green"
+                        BorderRadius="25"
+                        Command="{Binding Btn_Login}"
+                        HeightRequest="50"
+                        HorizontalOptions="CenterAndExpand"
+                        IsEnabled="{Binding IsAbilitado, Mode=TwoWay}"
+                        Text="Ingresar"
+                        TextColor="White">
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

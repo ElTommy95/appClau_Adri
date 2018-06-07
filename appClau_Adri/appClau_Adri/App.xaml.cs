@@ -1,3 +1,4 @@
+using appClau_Adri.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,12 +8,18 @@ namespace appClau_Adri
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static NavigationPage Navigator
+        {
+            get;
+            internal set;
+        }
+
+        public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
-		}
+			MainPage = new NavigationPage(new LoginPage());
+        }
 
 		protected override void OnStart ()
 		{
