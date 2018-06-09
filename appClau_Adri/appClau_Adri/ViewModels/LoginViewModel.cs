@@ -50,6 +50,8 @@
 
         private void BtnLogin()
         {
+            //MainViewModel.GetInstance().Claudia = new ClaudiaViewModel();
+            //await Application.Current.MainPage.Navigation.PushAsync(new ClaudiaPage());
             MainViewModel.GetInstance().Claudia = new ClaudiaViewModel();
             Application.Current.MainPage = new MasterPage();
         }

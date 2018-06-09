@@ -6,11 +6,149 @@
     Title="Claudia"
     x:Class="appClau_Adri.Views.ClaudiaPage">
     <ContentPage.Content>
-        <StackLayout
+        <ScrollView
+            Margin="5"
             BindingContext="{Binding Claudia}">
-            <Label Text="Welcome to ClaudiaPage"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!--Header-->
+                <Image
+                    Aspect="AspectFill"
+                    Source="Pak_Fraile">
+                </Image>
+
+                <!--Nombre y lema-->
+                <StackLayout Grid.Row="1"                    
+                    Padding="0,60,0,0"
+                    HorizontalOptions="Center">
+                    <Label
+                        HorizontalOptions="Center"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        Text="Novio y Apellido">
+                    </Label>
+                    <Label
+                        HorizontalOptions="Center"
+                        FontSize="20"
+                        TextColor="Gray"
+                        Text="Lema del Novio">
+                    </Label>
+                </StackLayout>
+
+                <!--Datillos-->
+                <Grid Grid.Row="2" 
+                      Margin="5,30" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout
+                        Grid.Column="0">
+                        <Label
+                            HorizontalOptions="Center"
+                            FontSize="20"
+                            TextColor="Black"
+                            Text="450">
+                        </Label>
+                        <Label
+                            HorizontalOptions="Center"
+                            FontSize="15"
+                            TextColor="Gray"
+                            Text="Algo">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="1">
+                        <Label
+                            HorizontalOptions="Center"
+                            FontSize="20"
+                            TextColor="Black"
+                            Text="450">
+                        </Label>
+                        <Label
+                            HorizontalOptions="Center"
+                            FontSize="15"
+                            TextColor="Gray"
+                            Text="Algo">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout
+                        Grid.Column="2">
+                        <Label
+                            HorizontalOptions="Center"
+                            FontSize="20"
+                            TextColor="Black"
+                            Text="450">
+                        </Label>
+                        <Label
+                            HorizontalOptions="Center"
+                            FontSize="15"
+                            TextColor="Gray"
+                            Text="Algo">
+                        </Label>
+                    </StackLayout>
+                </Grid>
+
+                <!--Descripción-->
+                <Label Grid.Row="3"
+                    Margin="5,20,5,0"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"
+                    TextColor="Black"
+                    Text="Palabras de la Novia al Novio Palabras de la Novia al Novio Palabras de la Novia al Novio Palabras de la Novia al Novio Palabras de la Novia al Novio Palabras de la Novia al Novio">
+                </Label>
+
+                <!--Boton de Recuerdos-->
+                <StackLayout Grid.Row="4"
+                    Margin="0"
+                    Padding="0"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Button 
+                        Margin="5,0"
+                        BackgroundColor="BlueViolet"
+                        BorderRadius="25"
+                        Command="{Binding Btn_Recuerdos}"
+                        HeightRequest="50"
+                        HorizontalOptions="CenterAndExpand"
+                        IsEnabled="{Binding IsAbilitado}"
+                        Text="Recuerdos"
+                        TextColor="White">
+                    </Button>
+                    <Button 
+                        Margin="5,0"
+                        BackgroundColor="BlueViolet"
+                        BorderRadius="25"
+                        Command="{Binding Btn_Videos}"
+                        HeightRequest="50"
+                        HorizontalOptions="CenterAndExpand"
+                        IsEnabled="{Binding IsAbilitado}"
+                        Text="     Videos     "
+                        TextColor="White">
+                    </Button>
+                </StackLayout>
+
+                <!--Foto Perfil-->
+                <Image
+                    Margin="0,20,0,0"
+                    Source="Perfil"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    HeightRequest="150"
+                    WidthRequest="150"
+                    TranslationY="80">
+                </Image>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
