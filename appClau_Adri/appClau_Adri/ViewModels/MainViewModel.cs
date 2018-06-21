@@ -24,6 +24,11 @@
             get;
             set;
         }
+        public FotosViewModel Fotos
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region Constructores
