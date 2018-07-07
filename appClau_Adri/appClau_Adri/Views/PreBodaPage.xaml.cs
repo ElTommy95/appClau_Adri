@@ -3,10 +3,11 @@
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FotosPage : TabbedPage
-    {
-		public FotosPage ()
+	public partial class PreBodaPage : ContentPage
+	{
+		public PreBodaPage ()
 		{
 			InitializeComponent ();
 		}

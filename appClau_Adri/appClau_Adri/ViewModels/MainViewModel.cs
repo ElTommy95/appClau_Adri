@@ -1,11 +1,14 @@
 ﻿namespace appClau_Adri.ViewModels
 {
+    using GalaSoft.MvvmLight.Command;
     using System;
     using System.Collections.ObjectModel;
+    using System.Windows.Input;
+    using Xamarin.Forms;
 
     public class MainViewModel
     {
-        #region Propiedades
+        #region Propiedades de ObservableCollection
         public ObservableCollection<MenuItemViewModel> Menus
         {
             get;
@@ -24,7 +27,12 @@
             get;
             set;
         }
-        public FotosViewModel Fotos
+        public PreBodaViewModel PreBoda
+        {
+            get;
+            set;
+        }
+        public GaleriaPrebodaViewModel GaleriaPreboda
         {
             get;
             set;
@@ -38,7 +46,6 @@
             this.Login = new LoginViewModel();
             this.LoadMenu();
         }
-
         #endregion
 
         #region Metodos
@@ -79,5 +86,6 @@
             return instance;
         }
         #endregion
+
     }
 }

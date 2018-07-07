@@ -4,9 +4,9 @@
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FotosPage : TabbedPage
-    {
-		public FotosPage ()
+	public partial class FiestaPage : ContentPage
+	{
+		public FiestaPage ()
 		{
 			InitializeComponent ();
 		}
