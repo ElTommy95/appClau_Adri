@@ -5,7 +5,7 @@
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GaleriaPrebodaPage : ContentPage
+	public partial class GaleriaPrebodaPage : NavigationPage
     {       
         public GaleriaPrebodaPage ()
 		{
@@ -17,7 +17,10 @@
                 "Pak_Studio.jpg",
                 "Pak_Playa.jpg"
             };
-            ImageCarouselView.ItemsSource = listaImagens;
+            
         }
+
+        public Color BarBackgroundColor { get; private set; }
+        public Color BarTextColor { get; private set; }
     }
 }
